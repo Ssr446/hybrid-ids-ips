@@ -1,0 +1,12 @@
+detection:
+  syn_scan:
+    packet_threshold: 20    # Number of SYN packets from a single IP
+    time_window: 5          # within X seconds
+  icmp_flood:
+    packet_threshold: 50    # Number of ICMP packets from a single IP
+    time_window: 5          # within X seconds
+  arp_spoof:
+    gratuitous_arp_threshold: 10 # Gratuitous ARPs within time window
+    time_window: 5
+prevention:
+  block_duration_minutes: 10

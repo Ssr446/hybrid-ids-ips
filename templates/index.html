@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDS/IPS Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <header class="topbar">
+            <div class="logo">
+                <span class="shield-icon">🛡️</span>
+                <h1>CyberSec IDS/IPS</h1>
+            </div>
+            <div class="status-indicator">
+                <span class="dot pulse"></span>
+                <span>System Active</span>
+            </div>
+        </header>
+
+        <main class="dashboard-grid">
+            
+            <section class="panel stats-panel">
+                <h2>Threat Statistics (24h)</h2>
+                <div class="chart-container">
+                    <canvas id="statsChart"></canvas>
+                </div>
+            </section>
+
+            <section class="panel blocklist-panel">
+                <h2>Active Blocklist</h2>
+                <div class="table-container">
+                    <table id="blocklistTable">
+                        <thead>
+                            <tr>
+                                <th>Source IP</th>
+                                <th>Expires At</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="panel events-panel full-width">
+                <h2>Live Event Feed</h2>
+                <div class="table-container">
+                    <table id="eventsTable">
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Source IP</th>
+                                <th>Attack Type</th>
+                                <th>Action Taken</th>
+                                <th>Severity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </main>
+    </div>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

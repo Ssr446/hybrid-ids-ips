@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: cybersec-ids
+    env: python
+    buildCommand: pip install -r requirements.txt && python generate_pcap.py
+    startCommand: gunicorn -w 1 --threads 4 -b 0.0.0.0:$PORT app:app
+    envVars:
+      - key: SIMULATION_MODE
+        value: "true"
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: DISCORD_WEBHOOK_URL
+        sync: false
