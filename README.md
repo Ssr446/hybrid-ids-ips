@@ -16,8 +16,8 @@ Simulation mode replays a synthetic PCAP file and avoids executing real `iptable
 
 ```bash
 # Clone and enter the directory
-git clone https://github.com/yourusername/cybersec-ids.git
-cd cybersec-ids
+git clone https://github.com/Ssr446/hybrid-ids-ips.git
+cd hybrid-ids-ips
 
 # Create a virtual environment and install dependencies
 python -m venv venv
@@ -59,8 +59,8 @@ To use actual packet sniffing and `iptables` blocking, you must run this on a Li
    ```
 5. **Setup the App**:
    ```bash
-   git clone https://github.com/yourusername/cybersec-ids.git
-   cd cybersec-ids
+   git clone https://github.com/Ssr446/hybrid-ids-ips.git
+   cd hybrid-ids-ips
    python3 -m venv venv
    source venv/bin/activate
    pip install -r requirements.txt
