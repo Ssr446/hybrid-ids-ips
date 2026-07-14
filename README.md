@@ -9,6 +9,12 @@ A Python-based IDS/IPS utilizing Scapy for deep packet inspection, iptables for 
 - **Alerting**: SMTP email and Discord Webhook integration.
 - **Dashboard**: Premium UI to view live event feeds, threat statistics, and active blocklists.
 
+## Screenshots
+
+![Dashboard Alerts](dashboard.png)
+![Terminal Alerts](terminalalert.png)
+![Ping Attack](ping.png)
+
 ## Setup Instructions
 
 ### 1. Local Development (Simulation Mode)
